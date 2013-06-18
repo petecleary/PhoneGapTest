@@ -9,7 +9,7 @@ function onDeviceReady() {
 
 
 var particleTest = function() {
-    var canvas = document.getElementById("canvas");
+    var canvas = document.getElementById("particalCanvas");
     var ctx = canvas.getContext("2d");
 
     //Make the canvas occupy the full page
@@ -89,6 +89,11 @@ var particleTest = function() {
     function onSuccess(acceleration) {
         mouse.x = (W / 2) + ((W / 20) * acceleration.x);
         mouse.y = (H / 2) + ((H / 20) * acceleration.y);
+        var element = document.getElementById('accelerometer');
+        element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+                            'Acceleration Y: ' + acceleration.y + '<br />' +
+                            'Acceleration Z: ' + acceleration.z + '<br />' +
+                            'Timestamp: ' + acceleration.timestamp + '<br />';
     }
 
     // onError: Failed to get the acceleration
