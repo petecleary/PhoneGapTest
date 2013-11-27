@@ -1,48 +1,24 @@
-<html>
+<!doctype html>
+<html lang="en" ng-app="myApp">
 <head>
-<script src="css/source-sans-pro.js"></script>
-<link href="css/styles.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link href="topcoat/css/topcoat-mobile-light.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-touch.js"></script>
+    <script src="lib/angular-resource.js"></script>
+    <script src="lib/angular-animate.js"></script>
+    <script src="lib/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/memory-services.js"></script>
+    <script src="js/rest-services.js"></script>
 </head>
-<body>
 
-<script id="home-tpl" type="text/x-handlebars-template">
-    <div class='header'><h1>Takka Team</h1></div>
-    <div class='search-bar'><input class='search-key' type="search"/></div>
-    <div class="scroll"><ul class='employee-list'></ul></div>
-    <div id="accelerometer" style="margin-top:100px"></div>
-</script>
+<body ng-controller="MainCtrl">
 
-<script id="employee-li-tpl" type="text/x-handlebars-template">
-    {{#.}}
-    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}<br/>{{this.title}}</a></li>
-    {{/.}}
-</script>
-
-<script id="employee-tpl" type="text/x-handlebars-template">
-    <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1></div>
-    <div class='details'>
-    <img id='image' src='img/{{img}}' style="float:left;margin:10px;height:100px"/>
-    <h1>{{firstName}} {{lastName}}</h1>
-    <h2>{{title}}</h2>
-    <span class="location"></span>
-    <ul>
-    <li>{{description}}</li>
-    <li><a href="mailto://{{email}}">Email<br/>{{email}}</a></li>
-    <li><a href="#" class="add-contact-btn">Add to Contacts</a></li>
-    <li><a href="#" class="change-pic-btn">Change Picture</a></li>
-    <li><a href="#" class="add-location-btn">Add Location</a></li>
-    </ul>
-    </div>
-</script>
-    
-<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
-<script src="lib/jquery-1.8.2.min.js"></script>
-<script src="lib/handlebars.js"></script>
-<script src="js/storage/memory-store.js"></script>
-<script src="js/HomeView.js"></script>
-<script src="js/EmployeeView.js"></script>
-<script src="js/main.js"></script>
-<script type="text/javascript" src="js/particals.js"></script>
+<div ng-view ng-class="slide"></div>
 
 </body>
 </html>

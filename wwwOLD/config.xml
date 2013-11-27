@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.piandmash.phonegaptest"
+        id        = "org.takkaproductions.takkateam"
         versionCode="10"
-        version   = "1.0.0">
+        version   = "1.1.0">
 
     <!-- versionCode is optional and Android only -->
-    <preference name="phonegap-version" value="2.9.0" />
-<!--
+    <preference name="phonegap-version" value="2.2.0" />
     <gap:splash src="splash.png" />
     <preference name="splash-screen-duration" value="5000" />
     <icon src="icon.png" />
--->
-    <name>Phonegap Test</name>
+    <name>Takka Team</name>
 
     <description>
-        Phonegap Test
+        Meet the takka team
     </description>
 
-    <author href="http://www.piandmash.com" email="pete@piandmash.com">
+    <author href="http://www.takkaproducitons.co.uk" email="pete.cleary@gmail.com">
         Pete Cleary
     </author>
 
